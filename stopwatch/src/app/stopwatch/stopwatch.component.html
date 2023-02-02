@@ -1,0 +1,47 @@
+<div class="container">
+    <h1>Stopwatch</h1>
+    <div class="stopwatch">
+        <h3>
+            <span >{{hrs}} : </span>
+            <span>{{min}} : </span>
+            <span >{{sec}} </span>
+            <!-- <span>{{ms}} </span> -->
+        </h3>
+    </div>
+    <hr>
+    <div class="button-container">
+        <button class="btn btn-success" *ngIf="!running" (click)="start()">
+            Start
+        </button>
+        <button class="btn btn-danger" *ngIf="running" (click)="stop()">
+            Stop
+        </button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-secondary" (click)="lap(hrs,min,sec)">Lap </button>
+         &nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-warning" (click)="reset()">Reset</button>
+
+    </div>
+    <div class="container1">
+    
+            <!-- <li>{{data}}</li> -->
+            <table class="table table-striped" >
+                <thead>
+                  <tr>
+                    <th>SrNo</th>
+                    <th>Created at</th>
+                    <th>lap</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let p of arr; let i = index; ">
+                  <tr>
+                    <td>{{i}}</td>
+                    <td>Doe</td>
+                    <td>{{p}}</td>
+                  </tr>
+                </tbody>
+              </table>
+       
+    </div>
+
+</div>
